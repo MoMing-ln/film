@@ -21,13 +21,13 @@ public class EmailUtils {
     private Pattern pattern = Pattern.compile(EMAIL_PATTERN);
 
     @Value("#{environment['smtp.host']}")
-    private String SMTP_HOST = "smtp.sina.cn";
+    private String SMTP_HOST = "smtp.example.com";
 
     @Value("#{environment['smtp.user']}")
-    private String SMTP_USER = "18811758128@sina.cn";
+    private String SMTP_USER = "your_mail@example.com";
 
     @Value("#{environment['smtp.password']}")
-    private String SMTP_PSWD = "a123123";
+    private String SMTP_PSWD = "your_mail_password_or_app_password";
 
     public boolean isValidEmailAddr(String emailAddr) {
         Matcher matcher = pattern.matcher(emailAddr);
